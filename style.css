@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.main_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.allfile{
+    margin: 10px auto;
+}
+
+.select_class {
+    text-align: center;
+}
+.select_class h3{
+    margin: 10px auto;
+}
+
+
+.main_grid{
+    display: grid;
+    margin: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px 5px;
+}
+
+.grid_item{
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    
+    /* justify-content: center; */
+    text-align: center;
+    /* align-items: center; */
+}

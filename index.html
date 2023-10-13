@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendence System</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <div class="main_content">
+        <h2>Attendence System</h2>
+        <div class="allfile"><button>Check All files</button></div>
+        
+        
+        <div class="select_class">
+            <h3>Enter class details</h3>
+                <label for="class_name">Enter class </label> &nbsp;
+                <input type="text" name="className" id="class_name"> &nbsp; &nbsp;
+                <label for="class_students"> Enter number of student</label> &nbsp;
+                <input type="number" name="stuNum" id="class_students" required> &nbsp;&nbsp;&nbsp;
+                <button onclick="takeAttendence()">Take Attendence</button>
+        </div>
+
+        <div class="main_grid" id="atd_grid">
+            <div class="grid_item">1</div>
+        </div>
+    </div>
+    
+</body>
+</html>
