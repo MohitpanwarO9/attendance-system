@@ -12,11 +12,9 @@
 
     <div class="main_content">
         <h2>Attendence System</h2>
-        <div class="allfile"><button>Check All files</button></div>
-        
+        <h3>Enter class details</h3>
         
         <div class="select_class">
-            <h3>Enter class details</h3>
                 <label for="class_name">Enter class </label> &nbsp;
                 <input type="text" name="className" id="class_name"> &nbsp; &nbsp;
                 <label for="class_students"> Enter number of student</label> &nbsp;
@@ -29,6 +27,20 @@
         </div>
 
         <button onclick="saveAttendence()">save the attendence</button>
+    </div>
+
+    <div class="show_results main_content">
+        <h3>Find check attendence</h3>
+
+        <div class="select_class">
+            <label for="find_Class">Enter class </label> &nbsp;
+            <input type="text" name="find_Class" id="find_Class"> &nbsp; &nbsp;
+            <button onclick="checkAttendence()">check attendence</button>
+        </div>
+
+        <div class="main_grid" id="checkatd_grid">
+            
+        </div>
     </div>
     
 </body>

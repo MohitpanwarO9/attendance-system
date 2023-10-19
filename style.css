@@ -15,6 +15,7 @@
 }
 
 .select_class {
+    display: flex;
     text-align: center;
 }
 .select_class h3{
@@ -25,7 +26,7 @@
 .main_grid{
     display: grid;
     margin: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 5px 5px;
 }
 
