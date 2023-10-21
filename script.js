@@ -75,7 +75,10 @@ function saveAttendence() {
             console.log(present_std.toString());
             console.log(localStorage.getItem(class_name.value));
         }
+        
+        alert("Attendence saveed")
     }
+
 }
 
 function checkAttendence() {

@@ -1,47 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attendence System</title>
+    <!DOCTYPE html>
+    <html lang="en">
 
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Attendence System</title>
 
-    <div class="main_content">
-        <h2>Attendence System</h2>
-        <h3>Enter class details</h3>
-        
-        <div class="select_class">
-                <label for="class_name">Enter class </label> &nbsp;
-                <input type="text" name="className" id="class_name"> &nbsp; &nbsp;
-                <label for="class_students"> Enter number of student</label> &nbsp;
-                <input type="number" name="stuNum" id="class_students" required> &nbsp;&nbsp;&nbsp;
-                <button onclick="takeAttendence()">Take Attendence</button>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+
+        <h2 class=" text-center fst-italic  p-3">Attendence System</h2>
+        <div class=" all_content row">
+
+            <div class="main_content col-md-4 border border-dark border-end-0 border-opacity-25 rounded-start-4 offset-md-1" >
+                <h3>Enter class details</h3>
+
+                <div class="select_class">
+                    <label for="class_name">Class Name </label>
+                    <input type="text" name="className" id="class_name" class="form-control border-2">
+                    <label for="class_students">Number of student</label> 
+                    <input type="number" name="stuNum" id="class_students" class="form-control border-2" required> 
+                    <br>
+                    <button onclick="takeAttendence()" class="btn btn-info text-white">Take Attendence</button>
+                </div>
+
+                <div class="main_grid" id="atd_grid">
+
+                </div>
+
+                <button onclick="saveAttendence()" class="btn btn-secondary">Save Attendence</button> <br>
+                
+            </div>
+
+            <div class="show_results main_content col-md-4 border border-dark border-start-0 border-opacity-25 rounded-end-4 offset-md-2">
+                <h3>Find check attendence</h3>
+
+                <div class="select_class">
+                    <label for="find_Class">Enter class </label>
+                    <input type="text" name="find_Class" id="find_Class" class="form-control border-2">
+                    <br>
+                    <button onclick="checkAttendence() " class="btn btn-secondary">check attendence</button>
+                </div>
+
+                <div class="main_grid" id="checkatd_grid">
+                    
+                </div>
+            </div>
+
+        </div>
+        <div class="container lower_text">
+            <h3 class="text-center">How it works</h3>
+            <hr>
         </div>
 
-        <div class="main_grid" id="atd_grid">
-            <h4>Here we will show the student list</h4>
-        </div>
+    </body>
 
-        <button onclick="saveAttendence()">save the attendence</button>
-    </div>
-
-    <div class="show_results main_content">
-        <h3>Find check attendence</h3>
-
-        <div class="select_class">
-            <label for="find_Class">Enter class </label> &nbsp;
-            <input type="text" name="find_Class" id="find_Class"> &nbsp; &nbsp;
-            <button onclick="checkAttendence()">check attendence</button>
-        </div>
-
-        <div class="main_grid" id="checkatd_grid">
-            
-        </div>
-    </div>
-    
-</body>
-</html>
+    </html>

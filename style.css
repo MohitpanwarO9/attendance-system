@@ -6,8 +6,15 @@
 .main_content{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+}
+.main_content h3{
+    margin: 10px auto;
+}
+
+#allcontent{
+    margin: 30px 0px 0px 0px;
 }
 
 .allfile{
@@ -16,27 +23,45 @@
 
 .select_class {
     display: flex;
-    text-align: center;
+    flex-direction: column;
+    /* text-align: center; */
 }
 .select_class h3{
     margin: 10px auto;
+}
+
+.select_class label{
+    margin: 10px 0px 0px 0px;
 }
 
 
 .main_grid{
     display: grid;
     margin: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 5px 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
 }
 
 .grid_item{
     border: 1px solid black;
-    width: 20px;
-    height: 20px;
-    padding: 10px;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
     
     /* justify-content: center; */
     text-align: center;
     /* align-items: center; */
+}
+
+.all_content{
+    display:flex;
+}
+
+.container{
+    margin: 15px 0px;
+}
+
+.lower_text{
+    margin: 20px 0px 0px 0px;
+    
 }
