@@ -12,7 +12,7 @@
         <script src="script.js"></script>
     </head>
 
-    <body>
+    <body onload="displayTakenAttendece()">
 
         <h2 class=" text-center fst-italic  p-3">Attendence System</h2>
         <div class=" all_content row">
@@ -49,6 +49,17 @@
 
                 <div class="main_grid" id="checkatd_grid">
                     
+                </div>
+                
+                <h4>Attendence Taken</h4>
+
+                <div class="text-center main_grid attTaken_grid" id="attT_grid">
+                    
+                </div>
+
+                <div class="del_all_Atd" id="del_all_sec">
+                    <p class="tesxt-info"> --- You have No Attendence record to show --- </p> 
+                    <button onclick="deleteTakenAttendence()" class="btn btn-danger delBtn">Delete All Attendence</button>
                 </div>
             </div>
 

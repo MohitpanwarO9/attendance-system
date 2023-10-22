@@ -16,13 +16,25 @@ let myfile={
 
 
 function takeAttendence() {
+    
     let std_no = document.getElementById("class_students").value;
+
+    //class name check student no check
+    let class_name = document.getElementById("class_name");
+    let std = document.getElementById("class_students").value;
+
+
+    if(class_name.value ==="" || std==="")
+    {
+        alert("Class or student Name is invalid");
+        return;
+    }
 
 
     let s = "";
     for (let i = 1; i <= std_no; i++) 
     {
-        s = s + `<div class="grid_item" id="gridItem_${i}" onclick="onTakeAttendence(this.id)">${i}</div> `
+        s = s + `<div class="grid_item" id="gridItem_${i}" onclick="onMarkAttendence(this.id)">${i}</div> `
         present_std.push(0);
     }
 
@@ -32,8 +44,9 @@ function takeAttendence() {
 
 }
 
-function onTakeAttendence(item_id) {
+function onMarkAttendence(item_id) {
 
+    
     let item = document.getElementById(item_id);
     let std_no = Number(item_id.substr(9));
 
@@ -68,17 +81,24 @@ function saveAttendence() {
         if (present_std.length === 0) 
         {
             alert("Please enter Number of student & click on take attendence");
+            return;
         }
         else 
         {
             localStorage.setItem(class_name.value, present_std.toString());
             console.log(present_std.toString());
             console.log(localStorage.getItem(class_name.value));
+            
+            // empty array and div
+            present_std=[];
+            let grid = document.getElementById("atd_grid");
+            grid.innerHTML = "";
+            alert("Attendence saveed")
         }
         
-        alert("Attendence saveed")
     }
 
+    displayTakenAttendece();
 }
 
 function checkAttendence() {
@@ -121,5 +141,39 @@ function checkAttendence() {
             let grid = document.getElementById("checkatd_grid");
             grid.innerHTML = s;
         }
+    }  
+}
+
+function displayTakenAttendece(){
+    
+    let elm = document.getElementById("attT_grid");
+    let s="";
+
+    Object.keys(localStorage).forEach(key=>{
+        s=s+`<p class=" border border-success rounded-2 bg-body-secondary grid_attTaken_grid">${key}</p>`;  
+        
+        //console.log(s);
+    })
+
+    //console.log(elm);
+
+    if(s==="")
+    {
+        document.getElementById("del_all_sec").innerHTML = `<p class="tesxt-info"> --- You have No Attendence record to show --- </p> 
+        <button onclick="deleteTakenAttendence()" class="btn btn-danger delBtn">Delete All Attendence</button>`;
+
+
     }
+    else
+    {
+        document.getElementById("del_all_sec").innerHTML = `<button onclick="deleteTakenAttendence()" class="btn btn-danger delBtn">Delete All Attendence</button>`;
+    }
+    
+    elm.innerHTML=s;
+}
+
+function deleteTakenAttendence()
+{
+    localStorage.clear();
+    displayTakenAttendece();
 }
