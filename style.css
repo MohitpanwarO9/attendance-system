@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=DotGothic16&family=Montserrat:wght@500&family=Shantell+Sans:ital,wght@1,500&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 .main_content{
@@ -55,6 +58,7 @@
 
 .all_content{
     display:flex;
+    
 }
 
 .container{
@@ -89,4 +93,19 @@
 }
 .del_all_Atd button{
     
+}
+
+.navbarAtd{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+.heading_atd{
+    background-color: #fcba03;
+    
+}
+
+.all_content{
+    margin-top: 80px !important;
 }

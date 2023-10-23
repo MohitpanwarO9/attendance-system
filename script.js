@@ -175,5 +175,7 @@ function displayTakenAttendece(){
 function deleteTakenAttendence()
 {
     localStorage.clear();
+    let grid = document.getElementById("checkatd_grid");
+     grid.innerHTML = "";
     displayTakenAttendece();
 }
